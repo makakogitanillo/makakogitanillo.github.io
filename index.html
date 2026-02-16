@@ -1,422 +1,335 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
-  <title>WowFolio - A Simple & Clean Portfolio Template For Developers</title>
-  <meta name="description" content="Wowfolio - A Simple & Clean Portfolio Template For Developers" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
+
+    <title>Portfolio - Lucas Vaquerizas</title>
+    <meta name="description" content="Portfolio de Lucas Vaquerizas - Dibujante, ilustrador y animador 2D/3D" />
+
+    <style>
+        .home-hero {
+            background: linear-gradient(rgba(0, 80, 180, 0.7), rgba(0, 80, 180, 0.7)), url("https://png.pngtree.com/png-vector/20231224/ourmid/pngtree-crawfish-or-river-lobster-boiled-and-presented-on-a-png-image_11216744.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+        }
+
+        .skills-showcase {
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        .skills-showcase__title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #004cb4;
+        }
+
+        .skills-showcase__cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .skills-card {
+            background: #f0f4ff;
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            width: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+            .skills-card img {
+                width: 50px;
+                height: 50px;
+                margin-bottom: 0.6rem;
+            }
+
+            .skills-card span {
+                font-size: 0.9rem;
+                font-weight: 600;
+                color: #004cb4;
+                text-align: center;
+            }
+
+            .skills-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+            }
+    </style>
 </head>
 
 <body>
-  <header class="main-header">
-    <div class="main-header__logo-container">
-      <div class="main-header__logo-img-cont">
-        <img
-          src="https://www.vivemasvidas.com/uploads/jesus-calleja.png"
-          alt="logo Image" class="main-header__logo-img" />
-      </div>
-      <h4 class="main-header__logo-text">John Anderson</h4>
-    </div>
-    <nav class="main-header__navigation">
-      <ul class="main-header__navigation-links">
-        <li class="main-header__navigation-link"><a href="./index.html"> Home </a></li>
-        <li class="main-header__navigation-link"><a href="./index.html#about"> About </a></li>
-        <li class="main-header__navigation-link">
-          <a href="./index.html#projects"> Projects </a>
-        </li>
-        <li class="main-header__navigation-link"><a href="./index.html#contact" href=""> Contact </a></li>
-      </ul>
-    </nav>
-    <div class="main-header__sm-scr-nav-btn">
-      <div class="main-header__sm-scr-nav-btn-line"></div>
-      <div class="main-header__sm-scr-nav-btn-line"></div>
-    </div>
-    <div class="main-header__sm-menu">
-      <div class="main-header__sm-menu-close">
+    <header class="main-header">
+        <div class="main-header__logo-container">
+            <div class="main-header__logo-img-cont">
+                <img src="https://www.vivemasvidas.com/uploads/jesus-calleja.png" alt="Logo" class="main-header__logo-img" />
+            </div>
+            <h4 class="main-header__logo-text">Lucas Vaquerizas</h4>
+        </div>
 
-      </div>
-      <ul class="main-header__sm-menu-links">
-        <li>
-          <a class="main-header__sm-menu-link main-header__sm-menu-link--1" name="home-hero">Home</a>
-        </li>
-
-        <li>
-          <a class="main-header__sm-menu-link main-header__sm-menu-link--2" name="about">About</a>
-        </li>
-        <li>
-          <a class="main-header__sm-menu-link main-header__sm-menu-link--3" name="projects">Projects</a>
-        </li>
-        <li>
-          <a class="main-header__sm-menu-link main-header__sm-menu-link--4" name="contact">Contact</a>
-        </li>
-      </ul>
-    </div>
-    <!-- <button class="btn btn-theme btn-sm">Download CV</button> -->
-  </header>
-
-  <!--Remove or Comment out this theme selector code when you are done with choosing the right color for your theme so this color selector don't appear when you host the site online-->
-  <div class="themeClrSelector">
-    <input placeholder="Color Selector" type="color" value="#1DA1F2" class="themeClrSelector__input" />
-    <img alt="theme color tester" src="https://img.icons8.com/fluent/48/000000/rgb-circle-1.png"
-      class="themeClrSelector__img" />
-  </div>
-  <!---->
-
-  <section id="home-hero" class="home-hero">
-    <div class="home-hero__content">
-      <div class="home-hero__info">
-        <h1 class="heading-primary home-hero__heading-primary">
-          <span class="heading-primary__sm"> HOLA panchitos 👋</span>
-          <span class="heading-primary__main">
-            Soy Lucas un alumno de campus fp, me especializo en la creacion de contenido 2D y 3D de juegos y entornos interactivos
-          </span>
-        </h1>
-        <button class="btn btn-theme home-hero__btn-theme">Projects</button>
-        <button class="btn btn-inv home-hero__btn-theme">Contact</button>
-      </div>
-    </div>
-  </section>
-  <section id="about" class="about main-section">
-    <div class="main-container">
-      <h2 class="heading-secondary projects__heading-secondary">
-        <span class="heading-secondary__sm"> About 🦄</span>
-        <span class="heading-secondary__main">
-          Here you will find more information about me, what I do, and list of my current skills in programming
-      </h2>
-      <div class="main-section__content">
-        <div class="about__info">
-          <div class="about__main-info">
-            <h3 class="heading-quaternary about__heading-quaternary">
-              My Story
-            </h3>
-            <p class="text-primary about__text-primary">
-              <span>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Error, aliquid! Itaque corrupti magnam fugiat mollitia labore
-                magni saepe veritatis voluptatum alias fugit. Explicabo
-                ducimus sequi aut corporis odio repellendus? Lorem ipsum dolor
-                sit amet
-              </span>
-              <span>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Error, aliquid! Itaque corrupti magnam fugiat mollitia labore
-                magni saepe veritatis voluptatum alias fugit. Explicabo
-                ducimus sequi aut corporis odio repellendus? Lorem ipsum dolor
-                sit amet
-              </span>
-              <span>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Error, aliquid! Itaque corrupti magnam fugiat mollitia labore
-                magni saepe veritatis voluptatum alias fugit. Explicabo
-                ducimus sequi aut corporis odio repellendus? Lorem ipsum dolor
-                sit amet
-              </span>
-            </p>
-            <button class="btn btn-theme about__btn-theme">Projects</button>
-          </div>
-          <div class="about__skill-info">
-            <h3 class="heading-quaternary about__heading-quaternary">
-              My Skills
-            </h3>
-            <ul class="about__skills">
-              <li class="about__skill">html</li>
-              <li class="about__skill">css</li>
-              <li class="about__skill">javascript</li>
-              <li class="about__skill">react</li>
-              <li class="about__skill">node</li>
-              <li class="about__skill">git</li>
-              <li class="about__skill">vscode</li>
-              <li class="about__skill">linux</li>
-              <li class="about__skill">react</li>
-              <li class="about__skill">node</li>
-              <li class="about__skill">git</li>
-              <li class="about__skill">vscode</li>
-              <li class="about__skill">linux</li>
-              <li class="about__skill">javascript</li>
-              <li class="about__skill">react</li>
+        <nav class="main-header__navigation">
+            <ul class="main-header__navigation-links">
+                <li class="main-header__navigation-link"><a href="./index.html"> Inicio </a></li>
+                <li class="main-header__navigation-link"><a href="./index.html#about"> Sobre mí </a></li>
+                <li class="main-header__navigation-link"><a href="./index.html#projects"> Proyectos </a></li>
+                <li class="main-header__navigation-link"><a href="./index.html#contact"> Contacto </a></li>
             </ul>
-          </div>
+        </nav>
+
+        <div class="main-header__sm-scr-nav-btn">
+            <div class="main-header__sm-scr-nav-btn-line"></div>
+            <div class="main-header__sm-scr-nav-btn-line"></div>
         </div>
-      </div>
-    </div>
-  </section>
-  <section class="skills-showcase">
-    <ul class="skills-showcase__list">
-      <li class="skills-showcase__list-item">
-        <i class="devicon-html5-plain"></i>
-      </li>
-      <li class="skills-showcase__list-item">
-        <i class="devicon-css3-plain"></i>
-      </li>
-      <li class="skills-showcase__list-item">
-        <i class="devicon-javascript-plain"></i>
-      </li>
-      <li class="skills-showcase__list-item">
-        <i class="devicon-react-original"></i>
-      </li>
-      <li class="skills-showcase__list-item">
-        <i class="devicon-sass-original"></i>
-      </li>
-      <li class="skills-showcase__list-item">
-        <i class="devicon-nodejs-plain"></i>
-      </li>
-      <li class="skills-showcase__list-item">
-        <i class="devicon-git-plain"></i>
-      </li>
 
-      <li class="skills-showcase__list-item">
-        <i class="devicon-android-plain"></i>
-      </li>
-      <li class="skills-showcase__list-item">
-        <i class="devicon-python-plain"></i>
-      </li>
-    </ul>
-  </section>
-  <section id="projects" class="projects main-section">
-    <div class="main-container">
-      <h2 class="heading-secondary projects__heading-secondary">
-        <span class="heading-secondary__sm"> Projects 🛠️</span>
-        <span class="heading-secondary__main">
-          Here you will find some of the personal and clients projects that I created with the project details
-        </span>
-      </h2>
-      <div class="main-section__content">
-        <div class="projects__list">
-          <div class="projects__list-item">
-            <div class="projects__list-item-count">
-              <span class="projects__list-item-count-num"> 1 </span>
-              <span class="projects__list-item-count-line"> </span>
-              <span class="projects__list-item-count-end-dot"> </span>
-            </div>
-            <div class="projects__list-item-details">
-              <div class="projects__list-item-img-cont">
-                <img src="./assets/mock.png" alt="Project Image" class="projects__list-item-img" />
-              </div>
-              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
-                Project Name
-              </h3>
-              <!-- <hr class="projects__title-text-divider" /> -->
-
-              <p class="text-primary projects__list-item-text-primary">
-                <span>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Error, aliquid! Itaque corrupti magnam fugiat mollitia
-                  labore magni saepe veritatis voluptatum alias fugit.
-                  Explicabo ducimus
-                </span>
-                <!-- <br />
-                  <br /> -->
-                <span>
-                  sapiente aut corporis odio repellendus? Lorem ipsum dolor
-                  sit amet, consectetur adipisicing elit
-                </span>
-              </p>
-              <button class="btn btn-theme projects__btn-theme">
-                Live Link
-              </button>
-              <button class="btn btn-inv projects__btn-inv">Code Link</button>
-            </div>
-          </div>
-          <div class="projects__list-item projects__list-item--inv">
-            <div class="projects__list-item-details">
-              <div class="projects__list-item-img-cont">
-                <img src="./assets/mock.png" alt="Project Image" class="projects__list-item-img" />
-              </div>
-              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
-                Project Name
-              </h3>
-              <!-- <hr class="projects__title-text-divider" /> -->
-
-              <p class="text-primary projects__list-item-text-primary">
-                <span>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Error, aliquid! Itaque corrupti magnam fugiat mollitia
-                  labore magni saepe veritatis voluptatum alias fugit.
-                  Explicabo ducimus
-                </span>
-                <!-- <br />
-                  <br /> -->
-                <span>
-                  sapiente aut corporis odio repellendus? Lorem ipsum dolor
-                  sit amet, consectetur adipisicing elit
-                </span>
-              </p>
-              <button class="btn btn-theme projects__btn-theme">
-                Live Link
-              </button>
-              <button class="btn btn-inv projects__btn-inv">Code Link</button>
-            </div>
-            <div class="projects__list-item-count">
-              <span class="projects__list-item-count-num"> 2 </span>
-              <span class="projects__list-item-count-line"> </span>
-              <span class="projects__list-item-count-end-dot"> </span>
-            </div>
-          </div>
-          <div class="projects__list-item">
-            <div class="projects__list-item-count">
-              <span class="projects__list-item-count-num"> 3 </span>
-              <span class="projects__list-item-count-line"> </span>
-              <span class="projects__list-item-count-end-dot"> </span>
-            </div>
-            <div class="projects__list-item-details">
-              <div class="projects__list-item-img-cont">
-                <img src="./assets/mock.png" alt="Project Image" class="projects__list-item-img" />
-              </div>
-              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
-                Project Name
-              </h3>
-              <!-- <hr class="projects__title-text-divider" /> -->
-
-              <p class="text-primary projects__list-item-text-primary">
-                <span>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Error, aliquid! Itaque corrupti magnam fugiat mollitia
-                  labore magni saepe veritatis voluptatum alias fugit.
-                  Explicabo ducimus
-                </span>
-                <!-- <br />
-                  <br /> -->
-                <span>
-                  sapiente aut corporis odio repellendus? Lorem ipsum dolor
-                  sit amet, consectetur adipisicing elit
-                </span>
-              </p>
-              <button class="btn btn-theme projects__btn-theme">
-                Live Link
-              </button>
-              <button class="btn btn-inv projects__btn-inv">Code Link</button>
-            </div>
-          </div>
-          <div class="projects__list-item projects__list-item--inv">
-            <div class="projects__list-item-details">
-              <div class="projects__list-item-img-cont">
-                <img src="./assets/mock.png" alt="Project Image" class="projects__list-item-img" />
-              </div>
-              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
-                Project Name
-              </h3>
-              <!-- <hr class="projects__title-text-divider" /> -->
-
-              <p class="text-primary projects__list-item-text-primary">
-                <span>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Error, aliquid! Itaque corrupti magnam fugiat mollitia
-                  labore magni saepe veritatis voluptatum alias fugit.
-                  Explicabo ducimus
-                </span>
-                <!-- <br />
-                  <br /> -->
-                <span>
-                  sapiente aut corporis odio repellendus? Lorem ipsum dolor
-                  sit amet, consectetur adipisicing elit
-                </span>
-              </p>
-              <button class="btn btn-theme projects__btn-theme">
-                Live Link
-              </button>
-              <button class="btn btn-inv projects__btn-inv">Code Link</button>
-            </div>
-            <div class="projects__list-item-count">
-              <span class="projects__list-item-count-num"> 4 </span>
-              <span class="projects__list-item-count-line"> </span>
-              <span class="projects__list-item-count-end-dot"> </span>
-            </div>
-          </div>
+        <div class="main-header__sm-menu">
+            <div class="main-header__sm-menu-close"></div>
+            <ul class="main-header__sm-menu-links">
+                <li>
+                    <a class="main-header__sm-menu-link main-header__sm-menu-link--1" name="home-hero">Inicio</a>
+                </li>
+                <li>
+                    <a class="main-header__sm-menu-link main-header__sm-menu-link--2" name="about">Sobre mí</a>
+                </li>
+                <li>
+                    <a class="main-header__sm-menu-link main-header__sm-menu-link--3" name="projects">Proyectos</a>
+                </li>
+                <li>
+                    <a class="main-header__sm-menu-link main-header__sm-menu-link--4" name="contact">Contacto</a>
+                </li>
+            </ul>
         </div>
-      </div>
-    </div>
-  </section>
-  <section id="contact" class="contact main-section">
-    <div class="main-container">
-      <h2 class="heading-secondary">
-        <span class="heading-secondary__sm"> Contact 📞</span>
-        <span class="heading-secondary__main">
-          Feel free to Contact me by submitting the form below and I will get back to you as soon as possible
-        </span>
-      </h2>
-      <div class="main-section__content">
-        <div class="contact__form-cont">
-          <form class="contact__form">
-            <div class="contact__form-field">
-              <label for="name" class="contact__form-field-label">Name</label>
-              <input placeholder="Enter Your Name" type="text" class="contact__form-field-input" />
-            </div>
-            <div class="contact__form-field">
-              <label for="name" class="contact__form-field-label">Email</label>
-              <input placeholder="Enter Your Email" type="text" class="contact__form-field-input" />
-            </div>
-            <div class="contact__form-field">
-              <label for="name" class="contact__form-field-label">Message</label>
-              <textarea placeholder="Enter Your Message" name="message" id="" cols="30" rows="10"
-                class="contact__form-field-input"></textarea>
-            </div>
-            <button type="submit" class="contact__form-submit">Submit</button>
-          </form>
-          <div class="contact__form-visual"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer class="main-footer">
-    <div class="main-footer__upper">
-      <div class="main-container">
-        <ul class="main-footer__links">
-          <li class="main-footer__link">
-            <a href="./index.html">Home</a>
-          </li>
-          <li class="main-footer__link">
-            <a href="./index.html#about">About</a>
-          </li>
-          <li class="main-footer__link">
-            <a href="./index.html#projects">Projects</a>
-          </li>
-          <li class="main-footer__link">
-            <a href="./index.html#contact">Contact</a>
-          </li>
-        </ul>
-        <div class="main-footer__mid-line"></div>
-        <div class="main-footer__socials">
-          <a href="#" class="main-footer__social-link">
-            <img
-              src="https://d33wubrfki0l68.cloudfront.net/5557d5a11584d7201a38ee1a95200f57a4cc0f88/15085/assets/png/github-ico.png"
-              alt="" class="main-footer__social-link-icon" />
-          </a>
-          <a href="#" class="main-footer__social-link">
-            <img src="./assets/icons8-instagram-48.png" alt="" class="main-footer__social-link-icon" />
-          </a>
-          <a href="#" class="main-footer__social-link">
-            <img src="./assets/icons8-twitter-50.png" alt="" class="main-footer__social-link-icon" />
-          </a>
-          <a href="#" class="main-footer__social-link">
-            <img
-              src="https://d33wubrfki0l68.cloudfront.net/7f29579dde49e02480372aa49f7189c5536b0118/34b92/assets/png/linkedin-ico.png"
-              alt="" class="main-footer__social-link-icon" />
-          </a>
-          <a href="#" class="main-footer__social-link">
-            <img src="./assets/icons8-pinterest-64.png" alt="" class="main-footer__social-link-icon" />
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="main-footer__bottom">
-      <div class="main-container">
-        <p class="main-footer__bottom-txt">
-          <!-- If you can give me some credits or shoutout here by linking to my website, then that will help me a lot :) -->
-          <a target="_blank" href="https://github.com/rammcodes/wowfolio">WowFolio</a> Open-Source Template
-          <script>document.write(new Date().getFullYear())</script>. Made by
-          <a target="_blank" href="https://rammaheshwari.com">Ram Maheshwari</a>
-        </p>
-      </div>
-    </div>
-  </footer>
-  <script src="./script.js"></script>
-</body>
+    </header>
 
-</html>
+    <section id="home-hero" class="home-hero">
+        <div class="home-hero__content">
+            <div class="home-hero__info">
+                <h1 class="heading-primary home-hero__heading-primary">
+                    <span class="heading-primary__sm">¡Hola! 👋</span>
+                    <span class="heading-primary__main">
+                        Soy Lucas Vaquerizas, dibujante, ilustrador y animador.
+                        Me especializo en crear arte 2D y 3D para videojuegos, personajes y entornos interactivos.
+                    </span>
+                </h1>
+
+                <button class="btn btn-theme home-hero__btn-theme" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">Ver proyectos</button>
+
+                <button class="btn btn-inv home-hero__btn-theme" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">Contactar</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about main-section">
+        <div class="main-container">
+            <h2 class="heading-secondary projects__heading-secondary">
+                <span class="heading-secondary__sm"> Sobre mí 😎</span>
+                <span class="heading-secondary__main">
+                    Aquí encontrarás información sobre mí, lo que hago y las herramientas con las que trabajo.
+                </span>
+            </h2>
+
+            <div class="main-section__content">
+                <div class="about__info">
+                    <div class="about__main-info">
+                        <h3 class="heading-quaternary about__heading-quaternary">Mi historia</h3>
+                        <p class="text-primary about__text-primary">
+                            <span>Soy Lucas Vaquerizas y me dedico al dibujo, la ilustración y la animación. Me encanta diseñar personajes, escenarios y mundos que cuenten historias.</span>
+                            <span>Actualmente estudio y practico técnicas de arte digital y creación de contenido para videojuegos, tanto en 2D como en 3D.</span>
+                            <span>Me gusta trabajar con estilos diferentes: desde ilustración más cartoon hasta diseños más realistas, y siempre intento mejorar mi nivel de composición, color e iluminación.</span>
+                        </p>
+                        <button class="btn btn-theme home-hero__btn-theme" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">Ver proyectos</button>
+                    </div>
+
+                    <div class="about__skill-info">
+                        <h3 class="heading-quaternary about__heading-quaternary">Mis especialidades</h3>
+                        <ul class="about__skills">
+                            <li class="about__skill">Ilustración</li>
+                            <li class="about__skill">Dibujo digital</li>
+                            <li class="about__skill">Diseño de personajes</li>
+                            <li class="about__skill">Concept Art</li>
+                            <li class="about__skill">Animación 2D</li>
+                            <li class="about__skill">Animación 3D</li>
+                            <li class="about__skill">Modelado 3D</li>
+                            <li class="about__skill">Texturizado</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills-showcase">
+        <h3 class="skills-showcase__title">Herramientas y programas</h3>
+        <div class="skills-showcase__cards">
+            <div class="skills-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/1280px-Adobe_Photoshop_CC_icon.svg.png" alt="Photoshop" />
+                <span>Photoshop</span>
+            </div>
+            <div class="skills-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Adobe_Animate_CC_icon_%282020%29.svg/960px-Adobe_Animate_CC_icon_%282020%29.svg.png" alt="Adobe Animate" />
+                <span>Adobe Animate</span>
+            </div>
+            <div class="skills-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Adobe_Premiere_Pro_CC_icon.svg/500px-Adobe_Premiere_Pro_CC_icon.svg.png" alt="Premiere Pro" />
+                <span>Premiere Pro</span>
+            </div>
+            <div class="skills-card">
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/autodesk-maya-icon.png" alt="Maya" />
+                <span>Maya</span>
+            </div>
+            <div class="skills-card">
+                <img src="https://logoeps.com/wp-content/uploads/2012/11/zbrush-vector-logo.png" alt="ZBrush" />
+                <span>ZBrush</span>
+            </div>
+            <div class="skills-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Blender_logo_no_text.svg/960px-Blender_logo_no_text.svg.png" alt="Blender" />
+                <span>Blender</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects main-section">
+        <div class="main-container">
+            <h2 class="heading-secondary projects__heading-secondary">
+                <span class="heading-secondary__sm"> Proyectos 🛠️</span>
+                <span class="heading-secondary__main">
+                    Aquí tienes algunos proyectos personales donde he trabajado ilustración, animación y contenido 3D.
+                </span>
+            </h2>
+
+            <div class="main-section__content">
+                <div class="projects__list">
+                    <div class="projects__list-item">
+                        <div class="projects__list-item-count">
+                            <span class="projects__list-item-count-num"> 1 </span>
+                            <span class="projects__list-item-count-line"> </span>
+                            <span class="projects__list-item-count-end-dot"> </span>
+                        </div>
+                        <div class="projects__list-item-details">
+                            <div class="projects__list-item-img-cont">
+                                <img src="./assets/mock.png" alt="Imagen del proyecto" class="projects__list-item-img" />
+                            </div>
+                            <h3 class="heading-tertiary projects__list-item-heading-tertiary">Diseño de personaje</h3>
+                            <p class="text-primary projects__list-item-text-primary">
+                                <span>Proyecto de ilustración centrado en el diseño de un personaje para un videojuego. Incluye bocetos, exploración de estilos y versión final.</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="projects__list-item projects__list-item--inv">
+                        <div class="projects__list-item-details">
+                            <div class="projects__list-item-img-cont">
+                                <img src="./assets/mock.png" alt="Imagen del proyecto" class="projects__list-item-img" />
+                            </div>
+                            <h3 class="heading-tertiary projects__list-item-heading-tertiary">Entorno 3D</h3>
+                            <p class="text-primary projects__list-item-text-primary">
+                                <span>Creación de un escenario 3D con modelado, iluminación y texturas. Pensado para un entorno interactivo tipo videojuego.</span>
+                            </p>
+
+                        </div>
+                        <div class="projects__list-item-count">
+                            <span class="projects__list-item-count-num"> 2 </span>
+                            <span class="projects__list-item-count-line"> </span>
+                            <span class="projects__list-item-count-end-dot"> </span>
+                        </div>
+                    </div>
+
+                    <div class="projects__list-item">
+                        <div class="projects__list-item-count">
+                            <span class="projects__list-item-count-num"> 3 </span>
+                            <span class="projects__list-item-count-line"> </span>
+                            <span class="projects__list-item-count-end-dot"> </span>
+                        </div>
+                        <div class="projects__list-item-details">
+                            <div class="projects__list-item-img-cont">
+                                <img src="./assets/mock.png" alt="Imagen del proyecto" class="projects__list-item-img" />
+                            </div>
+                            <h3 class="heading-tertiary projects__list-item-heading-tertiary">Animación 2D</h3>
+                            <p class="text-primary projects__list-item-text-primary">
+                                <span>Animación 2D enfocada en movimiento, acting y expresividad. Incluye pruebas, keyframes y resultado final.</span>
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="projects__list-item projects__list-item--inv">
+                        <div class="projects__list-item-details">
+                            <div class="projects__list-item-img-cont">
+                                <img src="./assets/mock.png" alt="Imagen del proyecto" class="projects__list-item-img" />
+                            </div>
+                            <h3 class="heading-tertiary projects__list-item-heading-tertiary">Ilustración final</h3>
+                            <p class="text-primary projects__list-item-text-primary">
+                                <span>Ilustración completa con composición, color e iluminación. Inspirada en arte para videojuegos y narrativa visual.</span>
+                            </p>
+
+                        </div>
+                        <div class="projects__list-item-count">
+                            <span class="projects__list-item-count-num"> 4 </span>
+                            <span class="projects__list-item-count-line"> </span>
+                            <span class="projects__list-item-count-end-dot"> </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact main-section">
+        <div class="main-container">
+            <h2 class="heading-secondary">
+                <span class="heading-secondary__sm"> Contacto 📞</span>
+                <span class="heading-secondary__main">Si quieres hablar conmigo, puedes escribirme desde este formulario y te responderé lo antes posible.</span>
+            </h2>
+            <div class="main-section__content">
+                <div class="contact__form-cont">
+                    <form class="contact__form">
+                        <div class="contact__form-field">
+                            <label for="name" class="contact__form-field-label">Nombre</label>
+                            <input placeholder="Escribe tu nombre" type="text" class="contact__form-field-input" />
+                        </div>
+                        <div class="contact__form-field">
+                            <label for="email" class="contact__form-field-label">Correo</label>
+                            <input value="lucas_vaquerizas" type="text" class="contact__form-field-input" />
+                        </div>
+                        <div class="contact__form-field">
+                            <label for="message" class="contact__form-field-label">Mensaje</label>
+                            <textarea placeholder="Escribe tu mensaje" name="message" cols="30" rows="10" class="contact__form-field-input"></textarea>
+                        </div>
+                        <button type="submit" class="contact__form-submit">Enviar</button>
+                    </form>
+                    <div class="contact__form-visual"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="main-footer__upper">
+            <div class="main-container">
+                <ul class="main-footer__links">
+                    <li class="main-footer__link"><a href="./index.html">Inicio</a></li>
+                    <li class="main-footer__link"><a href="./index.html#about">Sobre mí</a></li>
+                    <li class="main-footer__link"><a href="./index.html#projects">Proyectos</a></li>
+                    <li class="main-footer__link"><a href="./index.html#contact">Contacto</a></li>
+                </ul>
+                <div class="main-footer__mid-line"></div>
+                <div class="main-footer__socials">
+                    <a href="#" class="main-footer__social-link"><img src="https://d33wubrfki0l68.cloudfront.net/5557d5a11584d7201a38ee1a95200f57a4cc0f88/15085/assets/png/github-ico.png" alt="Github" class="main-footer__social-link-icon" /></a>
+                    <a href="#" class="main-footer__social-link"><img src="./assets/icons8-instagram-48.png" alt="Instagram" class="main-footer__social-link-icon" /></a>
+                    <a
